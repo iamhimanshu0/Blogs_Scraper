@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+
+
+<center>
+	<h2 style="margin-top: 10px;">
+		<b>Analytics Vidhya- Machine Learning</b>
+	</h2>
+</center>
+<div style="margin-top: 20px;" class="row">
+	{% for l, a_name, a_link, t, a in data %}
+		<div style="margin-bottom: 20px;" class="col-sm-6">
+		    <div  class="card">
+		      <div class="card-body">
+		        <h5 class="card-title">{{ t }}</h5>
+		        <p class="card-text">{{ a }}</p>
+		       	<h6 style="font-style: none;">Author Name:- <a href="{{a_link}}">{{a_name}}</a></h6>
+		        <hr>
+		        <a href="{{ l }}" class="btn btn-primary">Read Full Article</a>
+		      </div>
+		    </div>
+		  </div>
+  		
+	{% endfor %}
+  </div>
+
+</div>
+
+{%  endblock %}

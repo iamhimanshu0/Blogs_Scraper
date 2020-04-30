@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+
+<div style="margin-top: 20px;" class="row">
+	{% for l,a,t in data %}
+		<div style="margin-bottom: 20px;" class="col-sm-6">
+		    <div  class="card">
+		      <div class="card-body">
+		        <h5 class="card-title">{{ t }}</h5>
+		        <p class="card-text">{{ a }}</p>
+		        <a href="{{ l }}" class="btn btn-primary">Read Full Article</a>
+		      </div>
+		    </div>
+		  </div>
+  		
+	{% endfor %}
+  </div>
+
+</div>
+
+{%  endblock %}
